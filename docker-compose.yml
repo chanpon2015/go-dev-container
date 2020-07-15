@@ -2,5 +2,7 @@ version: "3.3"
 services:
     golang:
         build: .
+        enviroment:
+            - CGO_ENABLED=0
         ports:
             - 8999:8999
