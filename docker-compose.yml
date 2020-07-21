@@ -2,6 +2,8 @@ version: "3.3"
 services:
     golang:
         build: .
+        volumes:
+            - git-repository:/workspace/git-repository
         environment:
             - CGO_ENABLED=0
         ports:
