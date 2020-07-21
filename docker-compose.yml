@@ -2,7 +2,14 @@ version: "3.3"
 services:
     golang:
         build: .
-        enviroment:
+        environment:
             - CGO_ENABLED=0
         ports:
             - 8999:8999
+
+volumes:
+    git-repository:
+        driver_opts:
+            type: none
+            device: ./git-repository
+            o: bind
